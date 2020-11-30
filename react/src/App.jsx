@@ -13,8 +13,10 @@ function App() {
 	const handleChange = (input) => {
 		if (input.target.value) {
 			setSearchTerm(input.target.value);
+			setPage(1);
 		} else {
 			setSearchTerm('');
+			setPage(1);
 		}
 	};
 
@@ -38,6 +40,7 @@ function App() {
 
 	const sizeSelect = (option) => {
 		setSize(option.target.value);
+		setPage(1);
 	};
 
 	// On component (page) load, fetch the tyres & also reload when page, searchTerm, or size change
