@@ -3,6 +3,8 @@ const app = express();
 const mongoose = require('mongoose');
 const Tyre = require('./tyres');
 
+var port = process.env.PORT || 8080;
+
 mongoose.connect(
 	'mongodb+srv://joebi1kenobi:jm721348@cluster0.kryx6.mongodb.net/tyres?retryWrites=true&w=majority',
 	{
@@ -62,4 +64,6 @@ function paginatedResults(model) {
 	};
 }
 
-app.listen(8080);
+app.listen(port, function() {
+	console.log('Our app is running on http://localhost:' + port)
+});
