@@ -21,7 +21,6 @@ function paginatedResults(model) {
 	return async (req, res, next) => {
 		const page = parseInt(req.query.page);
 		const limit = parseInt(req.query.limit);
-		// const name = / req.query.name/;
 		const name = req.query.name;
 		const size = req.query.size;
 		const startIndex = (page - 1) * limit;
@@ -62,4 +61,4 @@ function paginatedResults(model) {
 	};
 }
 
-app.listen(8080);
+app.listen(process.env.PORT || 8080);

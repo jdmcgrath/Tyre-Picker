@@ -11,25 +11,38 @@
 	@media all and (max-width: 768px) {
 		padding: 0 16px;
 	}
+	.sizeSelect {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 20px;
+
+		.select {
+			margin: 20px;
+			width: 80%;
+			padding: 10px;
+			border-radius: 20px;
+		}
+	}
 
 	.navContent {
-
 		.btnContainer {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-around;
 			align-items: center;
-		
+
 			button {
 				background-color: lightblue;
 				width: 150px;
 				height: 45px;
 				border: none;
 				border-radius: 200px;
-				margin: 0 5px;				
+				margin: 0 5px;
 			}
 		}
-		
+
 		@media all and (max-width: 768px) {
 			display: none;
 		}
@@ -55,4 +68,3 @@
 		}
 	}
 }
-
