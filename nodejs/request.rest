@@ -1,0 +1,1 @@
+GET http://localhost:8080/tyres?name=ZT7&size=&page=1&limit=3

@@ -1,0 +1,58 @@
+.sideNav {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	width: 280px;
+	height: 100vh;
+	background-color: #232526;
+	color: #f0f0f0;
+	padding: 24px;
+
+	@media all and (max-width: 768px) {
+		padding: 0 16px;
+	}
+
+	.navContent {
+
+		.btnContainer {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+		
+			button {
+				background-color: lightblue;
+				width: 150px;
+				height: 45px;
+				border: none;
+				border-radius: 200px;
+				margin: 0 5px;				
+			}
+		}
+		
+		@media all and (max-width: 768px) {
+			display: none;
+		}
+
+		&.show {
+			display: block;
+		}
+	}
+
+	@media all and (max-width: 768px) {
+		z-index: 999;
+		width: auto;
+	}
+
+	.mobileMenu {
+		display: none;
+
+		@media all and (max-width: 768px) {
+			display: inline-block;
+			padding: 12px 0;
+			text-align: right;
+			cursor: pointer;
+		}
+	}
+}
+
