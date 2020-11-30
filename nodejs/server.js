@@ -13,7 +13,9 @@ mongoose.connect(
 const db = mongoose.connection;
 
 app.get('/Tyres', paginatedResults(Tyre), (req, res) => {
-	res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+	// var allowedOrigins = ['https://motoreasyreact.herokuapp.com/', 'localhost'];
+	const origin = req.headers.origin;
+	res.setHeader('Access-Control-Allow-Origin', origin);
 	res.json(res.paginatedResults);
 });
 
@@ -30,7 +32,6 @@ function paginatedResults(model) {
 
 		if (name && size) {
 			query = { name: name, size: size };
-			console.log(query);
 		} else if (name) {
 			query = { name: name };
 		} else if (size) {

@@ -20,9 +20,7 @@ function App() {
 
 	// Fetch the tyres from the NodeAPI which should be running locally at port 3000
 	const fetchTyres = () => {
-		fetch(
-			`https://stormy-harbor-31213.herokuapp.com/tyres?name=${searchTerm}&size=${size}&page=${page}&limit=3`
-		)
+		fetch(`https://stormy-harbor-31213.herokuapp.com/tyres?name=${searchTerm}&size=${size}&page=${page}&limit=3`)
 			.then((response) => response.json())
 			.then((data) => setTyres(data.results))
 			.catch((error) => console.log(error));
